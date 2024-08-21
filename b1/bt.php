@@ -8,7 +8,8 @@
     </head>
     <body>
         <<?php
-        echo "Đây là BTVN buổi 1"
+        echo "Đây là BTVN buổi 1";
+        echo "Trong này KHÔNG CÓ GÌ CẢ"
         ?>
     </body>
 </html>
