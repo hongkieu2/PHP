@@ -59,7 +59,7 @@
 
                 // Kiểm tra xem file có phải là TXT hay không
                 if ($fileType == 'text/plain') {
-                    require_once 'connect.php';
+                    require 'connect.php';
                     // 1. Đọc dữ liệu file txt
                     $file = fopen($fileTmpPath, "r");
                     $insertedCount = 0;
@@ -117,17 +117,7 @@
         <hr>
 
         <?php
-        $server = "localhost";
-        $database = "db_kieu_thu_hong";
-        $username = "root";
-        $password = "";
-
-        $conn = new mysqli($server, $username, $password, $database);
-
-        if ($conn->connect_error) {
-            die('Connect failed: ' . $conn->connect_error);
-        }
-
+        require 'connect.php';
         $query = "SELECT * FROM Course";
         $result = $conn->query($query);
 
