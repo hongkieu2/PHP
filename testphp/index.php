@@ -59,17 +59,7 @@
 
                 // Kiểm tra xem file có phải là TXT hay không
                 if ($fileType == 'text/plain') {
-                    // Kết nối cơ sở dữ liệu
-                    $server = "localhost";
-                    $database = "db_kieu_thu_hong";
-                    $username = "root";
-                    $password = "";
-                    $conn = new mysqli($server, $username, $password, $database);
-
-                    if ($conn->connect_error) {
-                        die('Connect failed: ' . $conn->connect_error);
-                    }
-
+                    require_once 'connect.php';
                     // 1. Đọc dữ liệu file txt
                     $file = fopen($fileTmpPath, "r");
                     $insertedCount = 0;
